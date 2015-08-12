@@ -1,1 +1,1 @@
-# libgo-docker-guard
+# libgo-docker-guard (DGS)
