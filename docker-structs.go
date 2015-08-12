@@ -49,6 +49,20 @@ type DockerVersion struct {
 	Version       string `json:"Version"`
 }
 
+type ContainerShort struct {
+	Command string   `json:"Command"`
+	Created int      `json:"Created"`
+	ID      string   `json:"Id"`
+	Image   string   `json:"Image"`
+	Labels  struct{} `json:"Labels"`
+	Names   []string `json:"Names"`
+	Ports   []struct {
+		PrivatePort int    `json:"PrivatePort"`
+		Type        string `json:"Type"`
+	} `json:"Ports"`
+	Status string `json:"Status"`
+}
+
 type Container struct {
 	AppArmorProfile string   `json:"AppArmorProfile"`
 	Args            []string `json:"Args"`
