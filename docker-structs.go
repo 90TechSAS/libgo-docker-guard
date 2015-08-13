@@ -29,6 +29,8 @@ type Container struct {
 	Image      string `json:"Image"`
 	IPAddress  string `json:"IPAddress"`
 	MacAddress string `json:"MacAddress"`
+	SizeRootFs int    `json:"SizeRootFs"`
+	SizeRw     int    `json:"SizeRw"`
 	State      struct {
 		Dead       bool   `json:"Dead"`
 		Error      string `json:"Error"`
