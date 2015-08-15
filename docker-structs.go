@@ -31,6 +31,7 @@ type Container struct {
 	MacAddress string  `json:"MacAddress"`
 	SizeRootFs float64 `json:"SizeRootFs"`
 	SizeRw     float64 `json:"SizeRw"`
+	MemoryUsed float64 `json:"MemoryUsed"`
 	State      struct {
 		Dead       bool   `json:"Dead"`
 		Error      string `json:"Error"`
