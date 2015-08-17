@@ -32,16 +32,5 @@ type Container struct {
 	SizeRootFs float64 `json:"SizeRootFs"`
 	SizeRw     float64 `json:"SizeRw"`
 	MemoryUsed float64 `json:"MemoryUsed"`
-	State      struct {
-		Dead       bool   `json:"Dead"`
-		Error      string `json:"Error"`
-		ExitCode   int    `json:"ExitCode"`
-		OOMKilled  bool   `json:"OOMKilled"`
-		Paused     bool   `json:"Paused"`
-		Pid        int    `json:"Pid"`
-		Restarting bool   `json:"Restarting"`
-		Running    bool   `json:"Running"`
-		StartedAt  string `json:"StartedAt"`
-		FinishedAt string `json:"FinishedAt"`
-	} `json:"State"`
+	Running    bool    `json:"Running"`
 }
