@@ -33,4 +33,5 @@ type Container struct {
 	SizeRw     float64 `json:"SizeRw"`
 	MemoryUsed float64 `json:"MemoryUsed"`
 	Running    bool    `json:"Running"`
+	Time       float64 `json:"Running"`
 }
