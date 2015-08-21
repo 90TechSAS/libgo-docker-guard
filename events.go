@@ -16,3 +16,26 @@ type Event struct {
 	Target string
 	Data   string
 }
+
+func (e *Event) TypeToString() string {
+	switch e.Type {
+	case DiskSpaceLimitReached:
+		return "DiskSpaceLimitReached"
+	case MemorySpaceLimitReached:
+		return "MemorySpaceLimitReached"
+	case ContainerStarted:
+		return "ContainerStarted"
+	case ContainerStopped:
+		return "ContainerStopped"
+	case ContainerRemoved:
+		return "ContainerRemoved"
+	case DiskIOOverload:
+		return "DiskIOOverload"
+	case NetBandwithOverload:
+		return "NetBandwithOverload"
+	case CPUUsageOverload:
+		return "CPUUsageOverload"
+	}
+
+	return "UnknownType"
+}
