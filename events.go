@@ -1,4 +1,4 @@
-package lib
+package dockerguard
 
 const (
 	DiskSpaceLimitReached   = iota
