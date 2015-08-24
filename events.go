@@ -1,39 +1,45 @@
 package dockerguard
 
 const (
-	DiskSpaceLimitReached   = iota
-	MemorySpaceLimitReached = iota
-	ContainerStarted        = iota
-	ContainerStopped        = iota
-	ContainerRemoved        = iota
-	DiskIOOverload          = iota
-	NetBandwithOverload     = iota
-	CPUUsageOverload        = iota
+	EventNotice = iota
+	EventWarning
+	EventCritical
+
+	EventDiskSpaceLimitReached = iota
+	EventMemorySpaceLimitReached
+	EventContainerStarted
+	EventContainerStopped
+	EventContainerRemoved
+	EventDiskIOOverload
+	EventNetBandwithOverload
+	EventCPUUsageOverload
 )
 
 type Event struct {
-	Type   int
-	Target string
-	Data   string
+	Severity int
+	Type     int
+	Target   string
+	Probe    string
+	Data     string
 }
 
 func (e *Event) TypeToString() string {
 	switch e.Type {
-	case DiskSpaceLimitReached:
+	case EventDiskSpaceLimitReached:
 		return "DiskSpaceLimitReached"
-	case MemorySpaceLimitReached:
+	case EventMemorySpaceLimitReached:
 		return "MemorySpaceLimitReached"
-	case ContainerStarted:
+	case EventContainerStarted:
 		return "ContainerStarted"
-	case ContainerStopped:
+	case EventContainerStopped:
 		return "ContainerStopped"
-	case ContainerRemoved:
+	case EventContainerRemoved:
 		return "ContainerRemoved"
-	case DiskIOOverload:
+	case EventDiskIOOverload:
 		return "DiskIOOverload"
-	case NetBandwithOverload:
+	case EventNetBandwithOverload:
 		return "NetBandwithOverload"
-	case CPUUsageOverload:
+	case EventCPUUsageOverload:
 		return "CPUUsageOverload"
 	}
 
