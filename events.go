@@ -9,6 +9,7 @@ const (
 	EventMemorySpaceLimitReached
 	EventContainerStarted
 	EventContainerStopped
+	EventContainerCreated
 	EventContainerRemoved
 	EventDiskIOOverload
 	EventNetBandwithOverload
