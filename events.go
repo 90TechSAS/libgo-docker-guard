@@ -34,6 +34,8 @@ func (e *Event) TypeToString() string {
 		return "ContainerStarted"
 	case EventContainerStopped:
 		return "ContainerStopped"
+	case EventContainerCreated:
+		return "ContainerCreated"
 	case EventContainerRemoved:
 		return "ContainerRemoved"
 	case EventDiskIOOverload:
