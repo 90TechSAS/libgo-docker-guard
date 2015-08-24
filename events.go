@@ -11,7 +11,6 @@ const (
 	EventContainerStopped
 	EventContainerCreated
 	EventContainerRemoved
-	EventDiskIOOverload
 	EventNetBandwithOverload
 	EventCPUUsageOverload
 )
@@ -38,8 +37,6 @@ func (e *Event) TypeToString() string {
 		return "ContainerCreated"
 	case EventContainerRemoved:
 		return "ContainerRemoved"
-	case EventDiskIOOverload:
-		return "DiskIOOverload"
 	case EventNetBandwithOverload:
 		return "NetBandwithOverload"
 	case EventCPUUsageOverload:
