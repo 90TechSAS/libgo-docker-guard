@@ -24,14 +24,16 @@ type DockerInfo struct {
 }
 
 type Container struct {
-	ID         string  `json:"Id"`
-	Hostname   string  `json:"Hostname"`
-	Image      string  `json:"Image"`
-	IPAddress  string  `json:"IPAddress"`
-	MacAddress string  `json:"MacAddress"`
-	SizeRootFs float64 `json:"SizeRootFs"`
-	SizeRw     float64 `json:"SizeRw"`
-	MemoryUsed float64 `json:"MemoryUsed"`
-	Running    bool    `json:"Running"`
-	Time       float64 `json:"Time"`
+	ID          string  `json:"Id"`
+	Hostname    string  `json:"Hostname"`
+	Image       string  `json:"Image"`
+	IPAddress   string  `json:"IPAddress"`
+	MacAddress  string  `json:"MacAddress"`
+	SizeRootFs  float64 `json:"SizeRootFs"`
+	SizeRw      float64 `json:"SizeRw"`
+	MemoryUsed  float64 `json:"MemoryUsed"`
+	NetBandwith float64 `json:"NetBandwith"`
+	CPUUsage    float64 `json:"CPUUsage"`
+	Running     bool    `json:"Running"`
+	Time        float64 `json:"Time"`
 }
