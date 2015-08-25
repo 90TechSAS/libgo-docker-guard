@@ -38,3 +38,7 @@ type Container struct {
 	Running       bool    `json:"Running"`
 	Time          float64 `json:"Time"`
 }
+
+type ProbeInfos struct {
+	CPUUsage float64 `json:"CPUUsage"`
+}
