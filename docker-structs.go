@@ -50,7 +50,7 @@ type SimpleContainer struct {
 
 type ProbeInfos struct {
 	Running     bool              `json:"Running"`
-	CPUUsage    float64           `json:"CPUUsage"`
+	LoadAvg     string            `json:"LoadAvg"`
 	MemoryTotal float64           `json:"MemoryTotal"`
 	MemoryUsed  float64           `json:"MemoryUsed"`
 	DiskTotal   float64           `json:"DiskTotal"`
