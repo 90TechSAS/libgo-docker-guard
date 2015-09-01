@@ -39,6 +39,21 @@ type Container struct {
 	Time          float64 `json:"Time"`
 }
 
+type SimpleContainer struct {
+	ID         string `json:"Id"`
+	Hostname   string `json:"Hostname"`
+	Image      string `json:"Image"`
+	IPAddress  string `json:"IPAddress"`
+	MacAddress string `json:"MacAddress"`
+	Running    bool   `json:"Running"`
+}
+
 type ProbeInfos struct {
-	CPUUsage float64 `json:"CPUUsage"`
+	Running     bool              `json:"Running"`
+	CPUUsage    float64           `json:"CPUUsage"`
+	MemoryTotal float64           `json:"MemoryTotal"`
+	MemoryUsed  float64           `json:"MemoryUsed"`
+	DiskTotal   float64           `json:"DiskTotal"`
+	DiskUsed    float64           `json:"DiskUsed"`
+	Containers  []SimpleContainer `json:"containers"`
 }
