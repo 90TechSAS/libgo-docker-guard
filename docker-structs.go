@@ -54,6 +54,6 @@ type ProbeInfos struct {
 	MemoryTotal     float64           `json:"MemoryTotal"`
 	MemoryAvailable float64           `json:"MemoryAvailable"`
 	DiskTotal       float64           `json:"DiskTotal"`
-	DiskUsed        float64           `json:"DiskUsed"`
+	DiskAvailable   float64           `json:"DiskAvailable"`
 	Containers      []SimpleContainer `json:"containers"`
 }
