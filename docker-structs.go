@@ -1,6 +1,6 @@
 package dockerguard
 
-type DockerInfo struct {
+type DockerInfos struct {
 	// Infos from docker api /version
 	APIVersion    string `json:"ApiVersion"`
 	Arch          string `json:"Arch"`
