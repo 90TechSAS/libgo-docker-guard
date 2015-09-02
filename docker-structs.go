@@ -45,7 +45,6 @@ type SimpleContainer struct {
 	Image      string `json:"Image"`
 	IPAddress  string `json:"IPAddress"`
 	MacAddress string `json:"MacAddress"`
-	Running    bool   `json:"Running"`
 }
 
 type ProbeInfos struct {
