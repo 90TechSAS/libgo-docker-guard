@@ -26,6 +26,7 @@ type DockerInfos struct {
 type Container struct {
 	ID            string  `json:"Id"`
 	Hostname      string  `json:"Hostname"`
+	Probe         string  `json:"Probe"`
 	Image         string  `json:"Image"`
 	IPAddress     string  `json:"IPAddress"`
 	MacAddress    string  `json:"MacAddress"`
