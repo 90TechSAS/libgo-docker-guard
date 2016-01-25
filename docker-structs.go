@@ -48,12 +48,12 @@ type SimpleContainer struct {
 }
 
 type ProbeInfos struct {
-	Name            string            `json:"Name"`
-	Running         bool              `json:"Running"`
-	LoadAvg         string            `json:"LoadAvg"`
-	MemoryTotal     float64           `json:"MemoryTotal"`
-	MemoryAvailable float64           `json:"MemoryAvailable"`
-	DiskTotal       float64           `json:"DiskTotal"`
-	DiskAvailable   float64           `json:"DiskAvailable"`
-	Containers      []SimpleContainer `json:"Containers"`
+	Name            string      `json:"Name"`
+	Running         bool        `json:"Running"`
+	LoadAvg         string      `json:"LoadAvg"`
+	MemoryTotal     float64     `json:"MemoryTotal"`
+	MemoryAvailable float64     `json:"MemoryAvailable"`
+	DiskTotal       float64     `json:"DiskTotal"`
+	DiskAvailable   float64     `json:"DiskAvailable"`
+	Containers      []Container `json:"Containers"`
 }
